@@ -546,7 +546,7 @@
                 <div style="display: flex; flex-direction: column; gap: 1rem;">
                     <div style="display: flex; gap: 1rem; align-items: center;">
                         <label style="width: 200px; font-weight: 600; color: var(--blue-30); margin: 0;">SPC Charge</label>
-                        <div class="input-addon-wrapper" style="flex: 1;"><input type="number" step="0.01" class="modern-input calc-sa" oninput="updateDashboard()"><span class="addon">%</span></div>
+                        <div class="input-addon-wrapper" style="flex: 1;"><input type="number" step="0.01" class="modern-input calc-sa" oninput="updateDashboard()"><span class="addon">฿</span></div>
                         <div class="input-addon-wrapper" style="flex: 1;"><input type="number" step="0.01"><span class="addon">฿/pcs</span></div>
                         <div class="input-addon-wrapper" style="flex: 1;"><input type="number" step="0.01"><span class="addon">%</span></div>
                     </div>
@@ -558,7 +558,7 @@
                     </div>
                     <div style="display: flex; gap: 1rem; align-items: center;">
                         <label style="width: 200px; font-weight: 600; color: var(--blue-30); margin: 0;">Sampling</label>
-                        <div class="input-addon-wrapper" style="flex: 1;"><input type="number" step="0.01" class="modern-input calc-sa" oninput="updateDashboard()"><span class="addon">%</span></div>
+                        <div class="input-addon-wrapper" style="flex: 1;"><input type="number" step="0.01" class="modern-input calc-sa" oninput="updateDashboard()"><span class="addon">฿</span></div>
                         <div class="input-addon-wrapper" style="flex: 1;"><input type="number" step="0.01"><span class="addon">฿/pcs</span></div>
                         <div class="input-addon-wrapper" style="flex: 1;"><input type="number" step="0.01"><span class="addon">%</span></div>
                     </div>
@@ -606,7 +606,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label>Design DP</label>
+                        <label>Design Status</label>
                         <div class="pill-toggle">
                             <input type="radio" id="design_true" name="design_status" value="true">
                             <label for="design_true">True</label>
@@ -618,15 +618,10 @@
 
                 <hr style="margin: 1.5rem 0;">
 
-               
-     <div class="form-grid" style="grid-template-columns: repeat(2, 1fr); max-width: 800px; margin-bottom: 1.5rem;">
-                     <div style="display: flex; gap: 1rem; align-items: center;">
-                        <label style="width: 200px; font-weight: 600; color: var(--blue-30); margin: 0;">Total weight (STD)</label>
-                        <div class="input-addon-wrapper" style="flex: 1;"><input type="number" step="0.01"><span class="addon"></span></div>
-                        <div class="input-addon-wrapper" style="flex: 1;"><input type="number" step="0.01"><span class="addon">gram</span></div>
-                    </div>
+                <div class="form-grid" style="grid-template-columns: repeat(2, 1fr); max-width: 800px; margin-bottom: 1.5rem;">
                     <div class="form-group"><label>Total weight (STD)</label><div class="input-addon-wrapper"><input type="number" step="0.01"><span class="addon">g</span><span class="addon" style="background-color: var(--bg-card); border-left: none;">STD</span></div></div>
                 </div>
+
                 <div class="form-grid" style="grid-template-columns: repeat(2, 1fr); max-width: 800px; margin-bottom: 0;">
                     <div class="form-group"><label>Total weight (OK)</label><div class="input-addon-wrapper"><input type="number" step="0.01"><span class="addon">g</span><span class="addon" style="background-color: var(--bg-card); border-left: none;">OK</span></div></div>
                 </div>
