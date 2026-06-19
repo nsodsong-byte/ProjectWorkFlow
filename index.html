@@ -412,7 +412,7 @@
                                 <th>Cost</th><th>Unit</th><th>Qty.</th><th>Qty_unit</th><th>Remark</th>
                                 <th>Estimate L/T</th><th>Formula cal</th>
                                 <th style="text-align: center;">Reject (Calc)</th>
-                                <th>Cost note</th><th>Cost per unit</th><th>Cost ratio</th>
+                                <th>Cost note</th><th>฿/pcs</th><th></th>
                             </tr>
                         </thead>
                         <tbody id="component-body">
@@ -440,8 +440,8 @@
                 
                 <div class="form-grid" style="grid-template-columns: repeat(3, 1fr);">
                     <div class="form-group"><label>Reject (%)</label><div class="input-addon-wrapper"><input type="number" id="mat-reject-percent" step="0.01" oninput="calculateRejectCosts()"><span class="addon">%</span></div></div>
-                    <div class="form-group"><label>Reject Cost per unit</label><div class="input-addon-wrapper" style="box-shadow: none;"><input type="number" id="mat-reject-cost" class="readonly calc-mat" readonly><span class="addon" style="background:transparent; border:none;">฿</span></div></div>
-                    <div class="form-group"><label>Reject Cost ratio</label><div class="input-addon-wrapper" style="box-shadow: none;"><input type="number" id="mat-reject-ratio" class="readonly" readonly><span class="addon" style="background:transparent; border:none;">%</span></div></div>
+                    <div class="form-group"><label>Reject ฿/pcs</label><div class="input-addon-wrapper" style="box-shadow: none;"><input type="number" id="mat-reject-cost" class="readonly calc-mat" readonly><span class="addon" style="background:transparent; border:none;">฿</span></div></div>
+                    <div class="form-group"><label>Reject %</label><div class="input-addon-wrapper" style="box-shadow: none;"><input type="number" id="mat-reject-ratio" class="readonly" readonly><span class="addon" style="background:transparent; border:none;">%</span></div></div>
                 </div>
             </div>
             <div class="card-footer-totals">
@@ -463,7 +463,7 @@
                                 <th>Cost</th><th>Unit</th><th>Qty.</th><th>Qty_unit</th><th>Remark</th>
                                 <th>Estimate L/T</th><th>Production By</th><th>Formula cal</th>
                                 <th style="text-align: center;">Reject (Calc)</th>
-                                <th>Cost note</th><th>Cost per unit</th><th>Cost ratio</th>
+                                <th>Cost note</th><th>฿/pcs</th><th>%</th>
                             </tr>
                         </thead>
                         <tbody id="process-body">
@@ -491,9 +491,9 @@
                 </button>
                 
                 <div class="form-grid" style="grid-template-columns: repeat(3, 1fr);">
-                    <div class="form-group"><label>Reject (%)</label><div class="input-addon-wrapper"><input type="number" id="proc-reject-percent" step="0.01" oninput="calculateRejectCosts()"><span class="addon">%</span></div></div>
-                    <div class="form-group"><label>Reject Cost per unit</label><div class="input-addon-wrapper" style="box-shadow: none;"><input type="number" id="proc-reject-cost" class="readonly calc-proc" readonly><span class="addon" style="background:transparent; border:none;">฿</span></div></div>
-                    <div class="form-group"><label>Reject Cost ratio</label><div class="input-addon-wrapper" style="box-shadow: none;"><input type="number" id="proc-reject-ratio" class="readonly" readonly><span class="addon" style="background:transparent; border:none;">%</span></div></div>
+                    <div class="form-group"><label>%Reject</label><div class="input-addon-wrapper"><input type="number" id="proc-reject-percent" step="0.01" oninput="calculateRejectCosts()"><span class="addon">%</span></div></div>
+                    <div class="form-group"><label>Reject (฿/pcs)</label><div class="input-addon-wrapper" style="box-shadow: none;"><input type="number" id="proc-reject-cost" class="readonly calc-proc" readonly><span class="addon" style="background:transparent; border:none;">฿</span></div></div>
+                    <div class="form-group"><label>%</label><div class="input-addon-wrapper" style="box-shadow: none;"><input type="number" id="proc-reject-ratio" class="readonly" readonly><span class="addon" style="background:transparent; border:none;">%</span></div></div>
                 </div>
             </div>
             <div class="card-footer-totals stacked">
@@ -605,8 +605,8 @@
                                 <th style="width: 25%;">Tooling Item</th>
                                 <th style="width: 30%;">Specification / Detail</th>
                                 <th style="width: 15%;">Estimate L/T</th>
-                                <th style="width: 15%;">Cost per unit (฿)</th>
-                                <th style="width: 15%;">Cost ratio (%)</th>
+                                <th style="width: 15%;">฿/pcs</th>
+                                <th style="width: 15%;">%</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -664,8 +664,8 @@
                             <tr>
                                 <th style="width: 55%;">Description</th>
                                 <th style="width: 15%;">Estimate L/T</th>
-                                <th style="width: 15%;">Cost per unit (฿)</th>
-                                <th style="width: 15%;">Cost ratio (%)</th>
+                                <th style="width: 15%;">฿/pcs</th>
+                                <th style="width: 15%;">%</th>
                             </tr>
                         </thead>
                         <tbody id="testing-body">
@@ -699,8 +699,8 @@
                             <tr>
                                 <th style="width: 55%;">Description</th>
                                 <th style="width: 15%;">Estimate L/T</th>
-                                <th style="width: 15%;">Cost per unit (฿)</th>
-                                <th style="width: 15%;">Cost ratio (%)</th>
+                                <th style="width: 15%;">฿/pcs</th>
+                                <th style="width: 15%;">%</th>
                             </tr>
                         </thead>
                         <tbody id="jig-body">
