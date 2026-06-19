@@ -138,47 +138,16 @@
         }
         .btn-add:hover { background-color: var(--cyan-10); color: #FFFFFF; transform: scale(1.02); box-shadow: 0 4px 15px var(--cyan-glow); }
 
-        .btn-assign {
-            background: var(--blue-gradient); color: #FFFFFF; border: none; padding: 0.6rem 1.25rem;
-            font-size: 0.85rem; font-weight: 600; border-radius: var(--radius-button); cursor: pointer;
-            display: inline-flex; align-items: center; gap: 0.5rem; box-shadow: 0 4px 12px var(--blue-glow); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); letter-spacing: 0.3px;
-        }
-        .btn-assign:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(30, 58, 138, 0.4); background: linear-gradient(135deg, #2563EB, var(--cyan-10)); }
-        .btn-assign svg { transition: transform 0.3s ease; }
-        .btn-assign:hover svg { transform: translateX(3px); }
-
         .readonly { background-color: transparent !important; color: var(--blue-30) !important; font-weight: 700; cursor: not-allowed; border-color: transparent !important; box-shadow: none !important; }
         td .readonly { background-color: #E2E8F0 !important; }
 
         /* =========================================
            1. EXACT PILL TOGGLE FOR DESIGN STATUS
            ========================================= */
-        .pill-toggle {
-            display: inline-flex;
-            background-color: #F1F5F9;
-            padding: 4px;
-            border-radius: 99px;
-            border: 1px solid var(--border);
-            width: fit-content;
-            align-items: center;
-        }
+        .pill-toggle { display: inline-flex; background-color: #F1F5F9; padding: 4px; border-radius: 99px; border: 1px solid var(--border); width: fit-content; align-items: center; }
         .pill-toggle input[type="radio"] { display: none; }
-        .pill-toggle label {
-            padding: 0.4rem 1.5rem;
-            margin: 0;
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: #64748B;
-            cursor: pointer;
-            border-radius: 99px;
-            transition: all 0.2s ease;
-            text-align: center;
-        }
-        .pill-toggle input[type="radio"]:checked + label {
-            background-color: #3BA4F6; /* สีฟ้าสว่างตามรูปต้นแบบเป๊ะ */
-            color: #FFFFFF;
-            box-shadow: 0 2px 8px rgba(59, 164, 246, 0.3);
-        }
+        .pill-toggle label { padding: 0.4rem 1.5rem; margin: 0; font-size: 0.9rem; font-weight: 600; color: #64748B; cursor: pointer; border-radius: 99px; transition: all 0.2s ease; text-align: center; }
+        .pill-toggle input[type="radio"]:checked + label { background-color: #3BA4F6; color: #FFFFFF; box-shadow: 0 2px 8px rgba(59, 164, 246, 0.3); }
 
         /* =========================================
            2. SEGMENTED CONTROL FOR JUDGEMENT
@@ -186,11 +155,7 @@
         .segmented-control { display: flex; background-color: #F1F5F9; padding: 0.35rem; border-radius: var(--radius-input); width: 100%; align-items: center; border: 1px solid var(--border); box-sizing: border-box; gap: 4px; }
         .segmented-control input[type="radio"] { display: none; }
         .sc-item { flex: 1; display: flex; }
-        .sc-item label {
-            padding: 0.5rem 1rem; margin: 0; font-size: 0.9rem; font-weight: 600; color: var(--text-dark);
-            cursor: pointer; border-radius: 8px; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); text-align: center; opacity: 0.7; flex: 1; display: block; box-sizing: border-box;
-        }
-        
+        .sc-item label { padding: 0.5rem 1rem; margin: 0; font-size: 0.9rem; font-weight: 600; color: var(--text-dark); cursor: pointer; border-radius: 8px; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); text-align: center; opacity: 0.7; flex: 1; display: block; box-sizing: border-box; }
         .sc-color-ok input[type="radio"]:checked + label { background-color: #10B981 !important; color: white; box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3) !important; opacity: 1; transform: scale(1.02); }
         .sc-color-rec input[type="radio"]:checked + label { background-color: #F59E0B !important; color: white; box-shadow: 0 4px 10px rgba(245, 158, 11, 0.3) !important; opacity: 1; transform: scale(1.02); }
         .sc-color-ng input[type="radio"]:checked + label { background-color: #EF4444 !important; color: white; box-shadow: 0 4px 10px rgba(239, 68, 68, 0.3) !important; opacity: 1; transform: scale(1.02); }
@@ -213,12 +178,8 @@
         .cost-value { width: 140px; text-align: right; font-weight: 600; font-size: 0.95rem; color: var(--text-dark); pointer-events: none; }
         .cost-value .percent { color: var(--blue-30); font-weight: 700; }
 
-        .sub-cost-container {
-            display: none; background: #F8FAFC; border-radius: 8px; margin-left: 230px; 
-            margin-bottom: 1rem; padding: 0.5rem 0; border: 1px solid var(--border);
-        }
+        .sub-cost-container { display: none; background: #F8FAFC; border-radius: 8px; margin-left: 230px; margin-bottom: 1rem; padding: 0.5rem 0; border: 1px solid var(--border); }
         .sub-cost-container.open { display: block; animation: fadeIn 0.3s ease; }
-
         @keyframes fadeIn { from { opacity: 0; transform: translateY(-5px); } to { opacity: 1; transform: translateY(0); } }
 
         .sub-cost-row { display: flex; justify-content: space-between; padding: 0.5rem 1rem; font-size: 0.85rem; color: #64748B; border-bottom: 1px dashed #E2E8F0; }
@@ -250,11 +211,53 @@
         .fsb-right { display: flex; align-items: center; gap: 1.25rem; }
         .fsb-divider { width: 2px; height: 40px; background: rgba(255,255,255,0.2); border-radius: 2px; }
         
+        .btn-print { background: #E2E8F0; color: var(--blue-30); border: none; padding: 0.85rem 1.5rem; border-radius: var(--radius-button); font-size: 1rem; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 0.5rem; transition: all 0.3s ease; }
+        .btn-print:hover { background: #CBD5E1; transform: translateY(-2px); }
+        
         .btn-draft, .btn-submit-final { border: none; padding: 0.85rem 1.5rem; border-radius: var(--radius-button); font-size: 1rem; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 0.5rem; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
         .btn-draft { background: var(--bg-card); color: var(--blue-30); box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
         .btn-draft:hover { transform: translateY(-2px); box-shadow: 0 6px 15px rgba(0,0,0,0.15); }
         .btn-submit-final { background: var(--cyan-gradient); color: #FFFFFF; box-shadow: 0 4px 15px var(--cyan-glow); }
         .btn-submit-final:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(14, 165, 233, 0.4); }
+
+        /* =========================================
+           PRINT MEDIA QUERIES (สำหรับ ปริ้น PDF)
+           ========================================= */
+        @media print {
+            body { background: #FFFFFF; padding: 0; margin: 0; }
+            .container { max-width: 100%; width: 100%; padding: 0; margin: 0; }
+            
+            /* ซ่อนปุ่มและบาร์ที่ไม่จำเป็นในหน้าปริ้น */
+            .floating-summary-bar, .btn-add { display: none !important; }
+            
+            /* ลบเงาและปรับระยะการ์ดสำหรับการปริ้น */
+            .card { 
+                box-shadow: none !important; 
+                border: 1px solid #E2E8F0 !important; 
+                margin-bottom: 1.5rem !important;
+                page-break-inside: avoid; /* ป้องกันการ์ดโดนตัดครึ่งหน้า */
+            }
+            .card-header {
+                -webkit-print-color-adjust: exact;
+                color-adjust: exact;
+                text-shadow: none !important;
+            }
+            
+            /* ปรับช่อง Input ให้เห็นขอบชัดเจนในหน้ากระดาษสีขาว */
+            .modern-input, .input-addon-wrapper {
+                background: #FFFFFF !important;
+                border: 1px solid #CBD5E1 !important;
+            }
+            .input-addon-wrapper .addon {
+                background: #F1F5F9 !important;
+                border-left: 1px solid #CBD5E1 !important;
+                border-right: 1px solid #CBD5E1 !important;
+            }
+            .cost-bar-fill, .cost-bar-container {
+                -webkit-print-color-adjust: exact;
+                color-adjust: exact;
+            }
+        }
     </style>
 </head>
 <body>
@@ -444,7 +447,7 @@
             <div class="card-footer-totals">
                 <div class="total-item">
                     <label>Total Raw Material Cost</label>
-                    <div class="input-addon-wrapper"><input type="text" id="total-mat-display" value="0.00" class="readonly" readonly><span class="addon">฿</span></div>
+                    <div class="input-addon-wrapper"><input type="text" id="total-mat-display" value="0.00" class="readonly" readonly><span class="addon">฿/pcs</span></div>
                 </div>
             </div>
         </div>
@@ -496,11 +499,11 @@
             <div class="card-footer-totals stacked">
                 <div class="total-item">
                     <label>Total Process Cost</label>
-                    <div class="input-addon-wrapper"><input type="text" id="total-proc-display" value="0.00" class="readonly" readonly><span class="addon">฿</span></div>
+                    <div class="input-addon-wrapper"><input type="text" id="total-proc-display" value="0.00" class="readonly" readonly><span class="addon">฿/pcs</span></div>
                 </div>
                 <div class="total-item grand-total">
                     <label>Total Raw Material & Process Cost</label>
-                    <div class="input-addon-wrapper"><input type="text" value="0.00" class="readonly" readonly><span class="addon" style="color: var(--cyan-10) !important;">฿</span></div>
+                    <div class="input-addon-wrapper"><input type="text" value="0.00" class="readonly" readonly><span class="addon" style="color: var(--cyan-10) !important;">฿/pcs</span></div>
                 </div>
             </div>
         </div>
@@ -517,7 +520,7 @@
             <div class="card-footer-totals">
                 <div class="total-item grand-total">
                     <label>Total Price</label>
-                    <div class="input-addon-wrapper"><input type="text" value="0.00" class="readonly calc-sa" readonly><span class="addon" style="color: var(--cyan-10) !important;">฿</span></div>
+                    <div class="input-addon-wrapper"><input type="text" value="0.00" class="readonly calc-sa" readonly><span class="addon" style="color: var(--cyan-10) !important;">฿/pcs</span></div>
                 </div>
             </div>
         </div>
@@ -535,7 +538,7 @@
             <div class="card-footer-totals">
                 <div class="total-item grand-total">
                     <label>Grand Total Price before S&A</label>
-                    <div class="input-addon-wrapper"><input type="text" value="0.00" class="readonly" readonly><span class="addon" style="color: var(--cyan-10) !important;">฿</span></div>
+                    <div class="input-addon-wrapper"><input type="text" value="0.00" class="readonly" readonly><span class="addon" style="color: var(--cyan-10) !important;">฿/pcs</span></div>
                 </div>
             </div>
         </div>
@@ -553,7 +556,7 @@
             <div class="card-footer-totals">
                 <div class="total-item grand-total">
                     <label>Grand Total Price before S&A</label>
-                    <div class="input-addon-wrapper"><input type="text" value="0.00" class="readonly" readonly><span class="addon" style="color: var(--cyan-10) !important;">฿</span></div>
+                    <div class="input-addon-wrapper"><input type="text" value="0.00" class="readonly" readonly><span class="addon" style="color: var(--cyan-10) !important;">฿/pcs</span></div>
                 </div>
             </div>
         </div>
@@ -596,13 +599,13 @@
             <div class="card-header">9. Tooling</div>
             <div class="card-body">
                 <div class="table-responsive">
-                    <table style="min-width: 1000px;">
+                    <table id="tb-mold" style="min-width: 1000px;">
                         <thead>
                             <tr>
                                 <th style="width: 25%;">Tooling Item</th>
                                 <th style="width: 30%;">Specification / Detail</th>
                                 <th style="width: 15%;">Estimate L/T</th>
-                                <th style="width: 15%;">Cost (฿)</th>
+                                <th style="width: 15%;">Cost per unit (฿)</th>
                                 <th style="width: 15%;">Cost ratio (%)</th>
                             </tr>
                         </thead>
@@ -618,13 +621,13 @@
                                 <td style="font-weight: 600; color: var(--text-dark); padding-left: 1.5rem;"><input type="hidden" class="item-name" value="Mold (Cavity x Mold X Price)">Mold (Cavity x Mold X Price)</td>
                                 <td>
                                     <div class="input-addon-wrapper" style="width: 100%;">
-                                        <input type="number" placeholder="16"><span class="addon">X</span>
-                                        <input type="number" placeholder="1"><span class="addon">X</span>
-                                        <input type="number" placeholder="1500">
+                                        <input type="number" id="mold-cavity" placeholder="16" oninput="calcMoldCost()"><span class="addon">X</span>
+                                        <input type="number" id="mold-qty" placeholder="1" oninput="calcMoldCost()"><span class="addon">X</span>
+                                        <input type="number" id="mold-price" placeholder="1500" oninput="calcMoldCost()">
                                     </div>
                                 </td>
                                 <td><input type="text" class="modern-input"></td>
-                                <td><input type="number" step="0.01" class="modern-input calc-tool" oninput="updateDashboard()"></td>
+                                <td><input type="number" step="0.01" id="mold-cost-result" class="modern-input calc-tool" oninput="updateDashboard()" readonly style="background-color: #E2E8F0; cursor: not-allowed;"></td>
                                 <td><input type="number" step="0.01" class="modern-input"></td>
                             </tr>
                             <tr>
@@ -634,6 +637,13 @@
                                 <td><input type="number" step="0.01" class="modern-input calc-tool" oninput="updateDashboard()"></td>
                                 <td><input type="number" step="0.01" class="modern-input"></td>
                             </tr>
+                            <tr>
+                                <td style="font-weight: 600; color: var(--text-dark); padding-left: 1.5rem;"><input type="hidden" class="item-name" value="Mold Grade">Mold Grade</td>
+                                <td><input type="text" class="modern-input"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -641,7 +651,7 @@
                 <div style="display: flex; justify-content: flex-end; margin-top: 1rem;">
                     <div class="total-item">
                         <label style="color: var(--text-dark);">Total Mold Cost</label>
-                        <div class="input-addon-wrapper"><input type="text" value="0.00" class="readonly" readonly><span class="addon" style="color:var(--text-dark) !important;">฿</span></div>
+                        <div class="input-addon-wrapper"><input type="text" id="total-mold-cost" value="0.00" class="readonly" readonly><span class="addon" style="color:var(--text-dark) !important;">฿/pcs</span></div>
                     </div>
                 </div>
 
@@ -676,7 +686,7 @@
                 <div style="display: flex; justify-content: flex-end; margin-top: -1.5rem;">
                     <div class="total-item">
                         <label style="color: var(--text-dark);">Total Testing Cost</label>
-                        <div class="input-addon-wrapper"><input type="text" value="0.00" class="readonly" readonly><span class="addon" style="color:var(--text-dark) !important;">฿</span></div>
+                        <div class="input-addon-wrapper"><input type="text" id="total-testing-cost" value="0.00" class="readonly" readonly><span class="addon" style="color:var(--text-dark) !important;">฿/pcs</span></div>
                     </div>
                 </div>
 
@@ -711,7 +721,7 @@
                 <div style="display: flex; justify-content: flex-end; margin-top: -1.5rem;">
                     <div class="total-item">
                         <label style="color: var(--text-dark);">Total Jig / Prototype Cost</label>
-                        <div class="input-addon-wrapper"><input type="text" value="0.00" class="readonly" readonly><span class="addon" style="color:var(--text-dark) !important;">฿</span></div>
+                        <div class="input-addon-wrapper"><input type="text" id="total-jig-cost" value="0.00" class="readonly" readonly><span class="addon" style="color:var(--text-dark) !important;">฿/pcs</span></div>
                     </div>
                 </div>
             </div>
@@ -719,7 +729,7 @@
             <div class="card-footer-totals">
                 <div class="total-item grand-total">
                     <label>Total Tooling Cost</label>
-                    <div class="input-addon-wrapper"><input type="text" id="total-tool-display" value="0.00" class="readonly" readonly><span class="addon" style="color: var(--cyan-10) !important;">฿</span></div>
+                    <div class="input-addon-wrapper"><input type="text" id="total-tool-display" value="0.00" class="readonly" readonly><span class="addon" style="color: var(--cyan-10) !important;">฿/pcs</span></div>
                 </div>
             </div>
         </div>
@@ -852,15 +862,19 @@
     <div class="fsb-center">
         <div class="fsb-price-box">
             <span class="fsb-label">IRC DEPRE</span>
-            <div class="fsb-value-group"><input type="text" id="summary-irc" value="0.00" readonly><span class="fsb-unit">฿/pc</span></div>
+            <div class="fsb-value-group"><input type="text" id="summary-irc" value="0.00" readonly><span class="fsb-unit">฿/pcs</span></div>
         </div>
         <div class="fsb-price-box">
             <span class="fsb-label">CUSTOMER PAY</span>
-            <div class="fsb-value-group"><input type="text" id="summary-customer" value="0.00" readonly><span class="fsb-unit">฿/pc</span></div>
+            <div class="fsb-value-group"><input type="text" id="summary-customer" value="0.00" readonly><span class="fsb-unit">฿/pcs</span></div>
         </div>
     </div>
     <div class="fsb-right">
         <div class="fsb-divider"></div>
+        <button type="button" class="btn-print" onclick="window.print()">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+            ปริ้น PDF
+        </button>
         <button type="button" class="btn-draft">บันทึก Draft</button>
         <button type="button" class="btn-submit-final">ส่ง Cost Breakdown</button>
     </div>
@@ -926,6 +940,19 @@
         }
     }
 
+    function calcMoldCost() {
+        var cav = parseFloat(document.getElementById('mold-cavity').value) || 0;
+        var qty = parseFloat(document.getElementById('mold-qty').value) || 0;
+        var price = parseFloat(document.getElementById('mold-price').value) || 0;
+        var total = cav * qty * price;
+        
+        var resultEl = document.getElementById('mold-cost-result');
+        if(total > 0) resultEl.value = total.toFixed(2);
+        else resultEl.value = '';
+        
+        updateDashboard();
+    }
+
     function updateDashboard() {
         var cpPcs = parseFloat(document.getElementById('compound-price-pcs').value) || 0;
         var matRejectCost = parseFloat(document.getElementById('mat-reject-cost').value) || 0;
@@ -976,14 +1003,30 @@
             var cost = parseFloat(input.value) || 0;
             if(cost > 0) {
                 var row = input.closest('tr');
-                var labelElement = row.querySelector('td:first-child');
-                var labelInput = labelElement.querySelector('.item-name') || labelElement.querySelector('input[type="hidden"]');
-                var label = labelInput ? labelInput.value : labelElement.innerText;
-                if(!label) label = "Tooling Item";
-                toolSum += cost;
-                toolItems.push({name: label, cost: cost});
+                if(row) {
+                    var labelElement = row.querySelector('td:first-child');
+                    var labelInput = labelElement.querySelector('.item-name') || labelElement.querySelector('input[type="hidden"]');
+                    var label = labelInput ? labelInput.value : labelElement.innerText;
+                    if(!label) label = "Tooling Item";
+                    toolSum += cost;
+                    toolItems.push({name: label, cost: cost});
+                }
             }
         });
+
+        // Update Subtotals for Tooling
+        var moldSum = 0;
+        document.querySelectorAll('#tb-mold .calc-tool').forEach(i => moldSum += (parseFloat(i.value) || 0));
+        document.getElementById('total-mold-cost').value = moldSum.toFixed(2);
+
+        var testingSum = 0;
+        document.querySelectorAll('#tb-testing .calc-tool').forEach(i => testingSum += (parseFloat(i.value) || 0));
+        document.getElementById('total-testing-cost').value = testingSum.toFixed(2);
+
+        var jigSum = 0;
+        document.querySelectorAll('#tb-jig .calc-tool').forEach(i => jigSum += (parseFloat(i.value) || 0));
+        document.getElementById('total-jig-cost').value = jigSum.toFixed(2);
+
 
         var grandTotal = matSum + procSum + saSum + designCost + toolSum;
 
