@@ -563,19 +563,31 @@
                         <div class="input-addon-wrapper" style="flex: 1;"><input type="number" step="0.01"><span class="addon">฿/pcs</span></div>
                         <div class="input-addon-wrapper" style="flex: 1;"><input type="number" step="0.01"><span class="addon">%</span></div>
                     </div>
-                    <div style="display: flex; gap: 1rem; align-items: center;">
-                        <label style="width: 200px; font-weight: 600; color: var(--blue-30); margin: 0;">S&A (Admin Ref, Sep'20)</label>
-                        <div class="input-addon-wrapper" style="flex: 1;"><input type="number" step="0.01"><span class="addon">%</span></div>
-                    </div>
                 </div>
             </div>
             <div class="card-footer-totals">
                 <div class="total-item grand-total">
                     <label>Grand Total Price before S&A</label>
                     <div class="input-addon-wrapper"><input type="text" value="0.00" class="readonly" readonly><span class="addon" style="color: var(--cyan-10) !important;">฿/pcs</span></div>
-                </div>
-            </div>
+
+        <div style="display: flex; gap: 1rem; align-items: center;">
+            <label style="width: 200px; font-weight: 600; color: var(--blue-30); margin: 0;">S&A (Admin Ref, Sep'20)</label>
+            <div class="input-addon-wrapper" style="flex: 1; border: 1px solid #ccc; border-radius: 12px; padding: 4px 8px; display: inline-flex; align-items: center; background-color: #f0f4f8;">
+    <input type="number" step="0.01" style="border: none; outline: none; flex: 1;">
+    <span class="addon">%</span>
+</div>
+            <div class="input-addon-wrapper" style="flex: 1; border: 1px solid #ccc; border-radius: 12px; padding: 4px 8px; display: inline-flex; align-items: center; background-color: #f0f4f8;">
+    <input type="number" step="0.01" style="border: none; outline: none; flex: 1;">
+    <span class="addon">&</span>
+</div>
+            <div class="input-addon-wrapper" style="flex: 1; border: 1px solid #ccc; border-radius: 12px; padding: 4px 8px; display: inline-flex; align-items: center; background-color: #f0f4f8;">
+    <input type="number" step="0.01" style="border: none; outline: none; flex: 1;">
+    <span class="addon">%</span>
+</div>
         </div>
+                </div>
+                </div>
+
 
         <div class="card">
             <div class="card-header">7. Compound loss</div>
@@ -589,7 +601,7 @@
             </div>
             <div class="card-footer-totals">
                 <div class="total-item grand-total">
-                    <label>Grand Total Price before S&A</label>
+                    <label>Total Compound loss</label>
                     <div class="input-addon-wrapper"><input type="text" value="0.00" class="readonly" readonly><span class="addon" style="color: var(--cyan-10) !important;">฿/pcs</span></div>
                 </div>
             </div>
