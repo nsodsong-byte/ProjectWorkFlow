@@ -294,11 +294,11 @@
                     <div class="form-group"><label>SAP Part No.</label><input type="text" class="modern-input"></div>
                     <div class="form-group"><label>Customer Part No.</label><input type="text" class="modern-input"></div>
                     <div class="form-group"><label>Materials spec</label><input type="text" class="modern-input"></div>
-                    <div class="form-group"><label>CAD Estimate</label><div class="input-addon-wrapper"><input type="number" step="0.01"><span class="addon">gram</span></div></div>
+                    <div class="form-group"><label>CAD Estimate</label><div class="input-addon-wrapper"><input type="number" step="0.01"><span class="addon">gram(s)</span></div></div>
                     
-                    <div class="form-group"><label>Net weight</label><div class="input-addon-wrapper"><input type="number" step="0.01"><span class="addon">gram</span></div></div>
+                    <div class="form-group"><label>Net weight</label><div class="input-addon-wrapper"><input type="number" step="0.01"><span class="addon">gram(s)</span></div></div>
                     <div class="form-group"><label>%Gross Weight</label><div class="input-addon-wrapper"><input type="number" step="0.01"><span class="addon">%</span></div></div>
-                    <div class="form-group"><label>Gross Weigth</label><div class="input-addon-wrapper"><input type="number" placeholder="0" step="0.01"><span class="addon">gram</span></div></div>
+                    <div class="form-group"><label>Gross Weigth</label><div class="input-addon-wrapper"><input type="number" placeholder="0" step="0.01"><span class="addon">gram(s)</span></div></div>
                     <div class="form-group"><label>Compound use (kg/month)</label><input type="number" placeholder="0" class="modern-input"></div>
                     
                     <div class="form-group">
@@ -372,7 +372,7 @@
                 <div class="form-grid">
                     <div class="form-group"><label>Compound Stage</label><select class="modern-input"><option>Current Compound</option><option>New Compound</option></select></div>
                     <div class="form-group"><label>Compound Prepare</label><select class="modern-input" onchange="checkBarwell(this)"><option>Common</option><option>Barwell</option><option>Special</option></select></div>
-                    <div class="form-group"><label>Compound Prepare cost</label><div class="input-addon-wrapper"><input type="number" id="compound-prepare-cost" placeholder="0"><span class="addon">฿</span></div></div>
+                    <div class="form-group"><label>Compound Prepare cost</label><div class="input-addon-wrapper"><input type="number" id="compound-prepare-cost" placeholder="0"><span class="addon">B</span></div></div>
                     <div class="form-group"><label>Compound Type</label><select class="modern-input"><option>NR</option><option>EPDM</option><option>NBR</option><option>CR</option><option>Silicone</option><option>ACM</option><option>FKM</option><option>AEM</option><option>EPCO</option></select></div>
                     <div class="form-group"><label>Second cure</label><select class="modern-input"><option>Yes</option><option>No</option></select></div>
                     <div class="form-group"><label>Compound Name</label><input type="text" class="modern-input"></div>
@@ -383,17 +383,17 @@
                 <hr>
                 <div class="form-grid" style="grid-template-columns: repeat(3, 1fr);">
                     <div class="form-group"><label>Compound Cost (B/kg)</label><input type="number" step="0.01" class="modern-input"></div>
-                    <div class="form-group"><label>Compound Cost (B/pcs)</label><input type="number" step="0.01" placeholder="0" class="modern-input"></div>
+                    <div class="form-group"><label>Compound Cost (B/pc)</label><input type="number" step="0.01" placeholder="0" class="modern-input"></div>
                     <div class="form-group"><label>Cost ratio</label><input type="text" class="modern-input"></div>
 
                     <div class="form-group"><label>Total Compound Cost (B/kg)</label><input type="number" step="0.01" placeholder="0" class="modern-input"></div>
-                    <div class="form-group"><label>Total Compound Cost (B/pcs)</label><input type="number" step="0.01" class="modern-input"></div>
+                    <div class="form-group"><label>Total Compound Cost (B/pc)</label><input type="number" step="0.01" class="modern-input"></div>
                     <div class="form-group"><label>Cost ratio</label><input type="text" class="modern-input"></div>
 
                     <div class="form-group"><label>Compound Price (B/kg)</label><input type="number" step="0.01" placeholder="0" class="modern-input"></div>
                     
                     <div class="form-group">
-                        <label>Compound Price (B/pcs)</label>
+                        <label>Compound Price (B/pc)</label>
                         <input type="number" step="0.01" placeholder="0" class="modern-input calc-mat" id="compound-price-pcs" oninput="updateDashboard()">
                     </div>
                     
@@ -413,7 +413,7 @@
                                 <th>Cost</th><th>Unit</th><th>Qty.</th><th>Qty_unit</th><th>Remark</th>
                                 <th>Estimate L/T</th><th>Formula cal</th>
                                 <th style="text-align: center;">Reject (Calc)</th>
-                                <th>Cost note</th><th>฿/pcs</th><th>%</th>
+                                <th>Cost note</th><th>B/pc</th><th>%</th>
                             </tr>
                         </thead>
                         <tbody id="component-body">
@@ -441,14 +441,14 @@
                 
                 <div class="form-grid" style="grid-template-columns: repeat(3, 1fr);">
                     <div class="form-group"><label>%Reject</label><div class="input-addon-wrapper"><input type="number" id="mat-reject-percent" step="0.01" oninput="calculateRejectCosts()"><span class="addon">%</span></div></div>
-                    <div class="form-group"><label>Reject Cost (฿/pcs)</label><div class="input-addon-wrapper" style="box-shadow: none;"><input type="number" id="mat-reject-cost" class="readonly calc-mat" readonly><span class="addon" style="background:transparent; border:none;">฿</span></div></div>
+                    <div class="form-group"><label>Reject Cost (B/pc)</label><div class="input-addon-wrapper" style="box-shadow: none;"><input type="number" id="mat-reject-cost" class="readonly calc-mat" readonly><span class="addon" style="background:transparent; border:none;">B</span></div></div>
                     <div class="form-group"><label>Reject Cost Ratio</label><div class="input-addon-wrapper" style="box-shadow: none;"><input type="number" id="mat-reject-ratio" class="readonly" readonly><span class="addon" style="background:transparent; border:none;">%</span></div></div>
                 </div>
             </div>
             <div class="card-footer-totals">
                 <div class="total-item">
                     <label>Total Raw Material Cost</label>
-                    <div class="input-addon-wrapper"><input type="text" id="total-mat-display" value="0.00" class="readonly" readonly><span class="addon">฿/pcs</span></div>
+                    <div class="input-addon-wrapper"><input type="text" id="total-mat-display" value="0.00" class="readonly" readonly><span class="addon">B/pc</span></div>
                 </div>
             </div>
         </div>
@@ -464,7 +464,7 @@
                                 <th>Cost</th><th>Unit</th><th>Qty.</th><th>Qty_unit</th><th>Remark</th>
                                 <th>Estimate L/T</th><th>Production By</th><th>Formula cal</th>
                                 <th style="text-align: center;">Reject (Calc)</th>
-                                <th>Cost note</th><th>฿/pcs</th><th>%</th>
+                                <th>Cost note</th><th>B/pc</th><th>%</th>
                             </tr>
                         </thead>
                         <tbody id="process-body">
@@ -493,18 +493,18 @@
                 
                 <div class="form-grid" style="grid-template-columns: repeat(3, 1fr);">
                     <div class="form-group"><label>%Reject</label><div class="input-addon-wrapper"><input type="number" id="proc-reject-percent" step="0.01" oninput="calculateRejectCosts()"><span class="addon">%</span></div></div>
-                    <div class="form-group"><label>Reject Cost (฿/pcs)</label><div class="input-addon-wrapper" style="box-shadow: none;"><input type="number" id="proc-reject-cost" class="readonly calc-proc" readonly><span class="addon" style="background:transparent; border:none;">฿</span></div></div>
+                    <div class="form-group"><label>Reject Cost (B/pc)</label><div class="input-addon-wrapper" style="box-shadow: none;"><input type="number" id="proc-reject-cost" class="readonly calc-proc" readonly><span class="addon" style="background:transparent; border:none;">B</span></div></div>
                     <div class="form-group"><label>Reject Cost Ratio</label><div class="input-addon-wrapper" style="box-shadow: none;"><input type="number" id="proc-reject-ratio" class="readonly" readonly><span class="addon" style="background:transparent; border:none;">%</span></div></div>
                 </div>
             </div>
             <div class="card-footer-totals stacked">
                 <div class="total-item">
                     <label>Total Process Cost</label>
-                    <div class="input-addon-wrapper"><input type="text" id="total-proc-display" value="0.00" class="readonly" readonly><span class="addon">฿/pcs</span></div>
+                    <div class="input-addon-wrapper"><input type="text" id="total-proc-display" value="0.00" class="readonly" readonly><span class="addon">B/pc</span></div>
                 </div>
                 <div class="total-item grand-total">
                     <label>Total Raw Material & Process Cost</label>
-                    <div class="input-addon-wrapper"><input type="text" value="0.00" class="readonly" readonly><span class="addon" style="color: var(--cyan-10) !important;">฿/pcs</span></div>
+                    <div class="input-addon-wrapper"><input type="text" value="0.00" class="readonly" readonly><span class="addon" style="color: var(--cyan-10) !important;">B/pc</span></div>
                 </div>
             </div>
         </div>
@@ -516,19 +516,19 @@
                     <div style="display: flex; gap: 1rem; align-items: center;">
                         <label style="width: 150px; font-weight: 600; color: var(--blue-30); margin: 0;">Packing</label>
                         <div class="input-addon-wrapper" style="flex: 1;"><input type="number" step="0.01"><span class="addon">%</span></div>
-                        <div class="input-addon-wrapper" style="flex: 1;"><input type="number" step="0.01"><span class="addon">฿/pcs</span></div>
+                        <div class="input-addon-wrapper" style="flex: 1;"><input type="number" step="0.01"><span class="addon">B/pc</span></div>
                         <div class="input-addon-wrapper" style="flex: 1;"><input type="number" step="0.01"><span class="addon">%</span></div>
                     </div>
                     <div style="display: flex; gap: 1rem; align-items: center;">
                         <label style="width: 150px; font-weight: 600; color: var(--blue-30); margin: 0;">Admin</label>
                         <div class="input-addon-wrapper" style="flex: 1;"><input type="number" step="0.01"><span class="addon">%</span></div>
-                        <div class="input-addon-wrapper" style="flex: 1;"><input type="number" step="0.01"><span class="addon">฿/pcs</span></div>
+                        <div class="input-addon-wrapper" style="flex: 1;"><input type="number" step="0.01"><span class="addon">B/pc</span></div>
                         <div class="input-addon-wrapper" style="flex: 1;"><input type="number" step="0.01"><span class="addon">%</span></div>
                     </div>
                     <div style="display: flex; gap: 1rem; align-items: center;">
                         <label style="width: 150px; font-weight: 600; color: var(--blue-30); margin: 0;">Profit</label>
                         <div class="input-addon-wrapper" style="flex: 1;"><input type="number" step="0.01"><span class="addon">%</span></div>
-                        <div class="input-addon-wrapper" style="flex: 1;"><input type="number" step="0.01"><span class="addon">฿/pcs</span></div>
+                        <div class="input-addon-wrapper" style="flex: 1;"><input type="number" step="0.01"><span class="addon">B/pc</span></div>
                         <div class="input-addon-wrapper" style="flex: 1;"><input type="number" step="0.01"><span class="addon">%</span></div>
                     </div>
                 </div>
@@ -536,7 +536,7 @@
             <div class="card-footer-totals">
                 <div class="total-item grand-total">
                     <label>Total Price</label>
-                    <div class="input-addon-wrapper"><input type="text" value="0.00" class="readonly calc-sa" readonly><span class="addon" style="color: var(--cyan-10) !important;">฿/pcs</span></div>
+                    <div class="input-addon-wrapper"><input type="text" value="0.00" class="readonly calc-sa" readonly><span class="addon" style="color: var(--cyan-10) !important;">B/pc</span></div>
                 </div>
             </div>
         </div>
@@ -547,20 +547,20 @@
                 <div style="display: flex; flex-direction: column; gap: 1rem;">
                     <div style="display: flex; gap: 1rem; align-items: center;">
                         <label style="width: 200px; font-weight: 600; color: var(--blue-30); margin: 0;">SPC Charge</label>
-                        <div class="input-addon-wrapper" style="flex: 1;"><input type="number" step="0.01" class="modern-input calc-sa" oninput="updateDashboard()"><span class="addon">฿</span></div>
-                        <div class="input-addon-wrapper" style="flex: 1;"><input type="number" step="0.01"><span class="addon">฿/pcs</span></div>
+                        <div class="input-addon-wrapper" style="flex: 1;"><input type="number" step="0.01" class="modern-input calc-sa" oninput="updateDashboard()"><span class="addon">B</span></div>
+                        <div class="input-addon-wrapper" style="flex: 1;"><input type="number" step="0.01"><span class="addon">B/pc</span></div>
                         <div class="input-addon-wrapper" style="flex: 1;"><input type="number" step="0.01"><span class="addon">%</span></div>
                     </div>
                     <div style="display: flex; gap: 1rem; align-items: center;">
                         <label style="width: 200px; font-weight: 600; color: var(--blue-30); margin: 0;">QA Inspection</label>
-                        <div class="input-addon-wrapper" style="flex: 1;"><input type="number" step="0.01" class="modern-input calc-sa" oninput="updateDashboard()"><span class="addon">฿/hr</span></div>
+                        <div class="input-addon-wrapper" style="flex: 1;"><input type="number" step="0.01" class="modern-input calc-sa" oninput="updateDashboard()"><span class="addon">B/hr</span></div>
                         <div class="input-addon-wrapper" style="flex: 1;"><input type="number" step="0.01"><span class="addon">pcs/hr</span></div>
-                        <div class="input-addon-wrapper" style="flex: 1;"><input type="number" step="0.01"><span class="addon">฿/pcs</span></div>
+                        <div class="input-addon-wrapper" style="flex: 1;"><input type="number" step="0.01"><span class="addon">B/pc</span></div>
                     </div>
                     <div style="display: flex; gap: 1rem; align-items: center;">
                         <label style="width: 200px; font-weight: 600; color: var(--blue-30); margin: 0;">Sampling</label>
-                        <div class="input-addon-wrapper" style="flex: 1;"><input type="number" step="0.01" class="modern-input calc-sa" oninput="updateDashboard()"><span class="addon">฿</span></div>
-                        <div class="input-addon-wrapper" style="flex: 1;"><input type="number" step="0.01"><span class="addon">฿/pcs</span></div>
+                        <div class="input-addon-wrapper" style="flex: 1;"><input type="number" step="0.01" class="modern-input calc-sa" oninput="updateDashboard()"><span class="addon">B</span></div>
+                        <div class="input-addon-wrapper" style="flex: 1;"><input type="number" step="0.01"><span class="addon">B/pc</span></div>
                         <div class="input-addon-wrapper" style="flex: 1;"><input type="number" step="0.01"><span class="addon">%</span></div>
                     </div>
                 </div>
@@ -568,7 +568,7 @@
             <div class="card-footer-totals">
                 <div class="total-item grand-total">
                     <label>Grand Total Price before S&A</label>
-                    <div class="input-addon-wrapper"><input type="text" value="0.00" class="readonly" readonly><span class="addon" style="color: var(--cyan-10) !important;">฿/pcs</span></div>
+                    <div class="input-addon-wrapper"><input type="text" value="0.00" class="readonly" readonly><span class="addon" style="color: var(--cyan-10) !important;">B/pc</span></div>
 
         <div style="display: flex; gap: 1rem; align-items: center;">
             <label style="width: 200px; font-weight: 600; color: var(--blue-30); margin: 0;">S&A (Admin Ref, Sep'20)</label>
@@ -596,14 +596,14 @@
                 <div class="form-grid" style="grid-template-columns: repeat(4, 1fr);">
                     <div class="form-group"><label>Min CPD</label><input type="number" class="modern-input"></div>
                     <div class="form-group"><label>CPD use</label><input type="number" placeholder="0" class="modern-input"></div>
-                    <div class="form-group"><label>Cost CPD</label><div class="input-addon-wrapper"><input type="number" placeholder="0" class="modern-input calc-sa" oninput="updateDashboard()"><span class="addon">฿</span></div></div>
+                    <div class="form-group"><label>Cost CPD</label><div class="input-addon-wrapper"><input type="number" placeholder="0" class="modern-input calc-sa" oninput="updateDashboard()"><span class="addon">B</span></div></div>
                     <div class="form-group"><label>Volume</label><div class="input-addon-wrapper"><input type="number" placeholder="0"><span class="addon">pcs</span></div></div>
                 </div>
             </div>
             <div class="card-footer-totals">
                 <div class="total-item grand-total">
                     <label>Total Compound loss</label>
-                    <div class="input-addon-wrapper"><input type="text" value="0.00" class="readonly" readonly><span class="addon" style="color: var(--cyan-10) !important;">฿/pcs</span></div>
+                    <div class="input-addon-wrapper"><input type="text" value="0.00" class="readonly" readonly><span class="addon" style="color: var(--cyan-10) !important;">B/pc</span></div>
                 </div>
             </div>
         </div>
@@ -616,7 +616,7 @@
                         <label>Design Cost (Custom for Analysis)</label>
                         <div class="input-addon-wrapper">
                             <input type="number" id="design-cost-input" class="modern-input calc-design" step="0.01" oninput="updateDashboard()">
-                            <span class="addon">฿</span>
+                            <span class="addon">B</span>
                         </div>
                     </div>
                     <div class="form-group">
@@ -652,7 +652,7 @@
                                 <th style="width: 25%;">Tooling Item</th>
                                 <th style="width: 30%;">Specification / Detail</th>
                                 <th style="width: 15%;">Estimate L/T</th>
-                                <th style="width: 15%;">Price (฿)</th>
+                                <th style="width: 15%;">Price (B)</th>
                                 <th style="width: 15%;">%</th>
                             </tr>
                         </thead>
@@ -698,7 +698,7 @@
                 <div style="display: flex; justify-content: flex-end; margin-top: 1rem;">
                     <div class="total-item">
                         <label style="color: var(--text-dark);">Total Mold Cost</label>
-                        <div class="input-addon-wrapper"><input type="text" id="total-mold-cost" value="0.00" class="readonly" readonly><span class="addon" style="color:var(--text-dark) !important;">฿/pcs</span></div>
+                        <div class="input-addon-wrapper"><input type="text" id="total-mold-cost" value="0.00" class="readonly" readonly><span class="addon" style="color:var(--text-dark) !important;">B/pc</span></div>
                     </div>
                 </div>
 
@@ -711,7 +711,7 @@
                             <tr>
                                 <th style="width: 55%;">Description</th>
                                 <th style="width: 15%;">Estimate L/T</th>
-                                <th style="width: 15%;">Price (฿)</th>
+                                <th style="width: 15%;">Price (B)</th>
                                 <th style="width: 15%;">%</th>
                             </tr>
                         </thead>
@@ -733,7 +733,7 @@
                 <div style="display: flex; justify-content: flex-end; margin-top: -1.5rem;">
                     <div class="total-item">
                         <label style="color: var(--text-dark);">Total Testing Cost</label>
-                        <div class="input-addon-wrapper"><input type="text" id="total-testing-cost" value="0.00" class="readonly" readonly><span class="addon" style="color:var(--text-dark) !important;">฿/pcs</span></div>
+                        <div class="input-addon-wrapper"><input type="text" id="total-testing-cost" value="0.00" class="readonly" readonly><span class="addon" style="color:var(--text-dark) !important;">B/pc</span></div>
                     </div>
                 </div>
 
@@ -746,7 +746,7 @@
                             <tr>
                                 <th style="width: 55%;">Description</th>
                                 <th style="width: 15%;">Estimate L/T</th>
-                                <th style="width: 15%;">Price (฿)</th>
+                                <th style="width: 15%;">Price (B)</th>
                                 <th style="width: 15%;">%</th>
                             </tr>
                         </thead>
@@ -768,7 +768,7 @@
                 <div style="display: flex; justify-content: flex-end; margin-top: -1.5rem;">
                     <div class="total-item">
                         <label style="color: var(--text-dark);">Total Jig / Prototype Cost</label>
-                        <div class="input-addon-wrapper"><input type="text" id="total-jig-cost" value="0.00" class="readonly" readonly><span class="addon" style="color:var(--text-dark) !important;">฿/pcs</span></div>
+                        <div class="input-addon-wrapper"><input type="text" id="total-jig-cost" value="0.00" class="readonly" readonly><span class="addon" style="color:var(--text-dark) !important;">B/pc</span></div>
                     </div>
                 </div>
             </div>
@@ -776,7 +776,7 @@
             <div class="card-footer-totals">
                 <div class="total-item grand-total">
                     <label>Total Tooling Cost</label>
-                    <div class="input-addon-wrapper"><input type="text" id="total-tool-display" value="0.00" class="readonly" readonly><span class="addon" style="color: var(--cyan-10) !important;">฿/pcs</span></div>
+                    <div class="input-addon-wrapper"><input type="text" id="total-tool-display" value="0.00" class="readonly" readonly><span class="addon" style="color: var(--cyan-10) !important;">B/pc</span></div>
                 </div>
             </div>
         </div>
@@ -840,35 +840,35 @@
                 <div class="cost-row" onclick="toggleSubCost('sub-mat')">
                     <div class="cost-label"><span class="chevron">▶</span> Material (วัตถุดิบ)</div>
                     <div class="cost-bar-container"><div class="cost-bar-fill" id="bar-mat" style="width: 0%; background: var(--color-mat);"></div></div>
-                    <div class="cost-value"><span class="percent" id="pct-mat">0.0%</span> · <span id="val-mat">0.00</span> ฿/pc</div>
+                    <div class="cost-value"><span class="percent" id="pct-mat">0.0%</span> · <span id="val-mat">0.00</span> B/pc</div>
                 </div>
                 <div class="sub-cost-container" id="sub-mat"></div>
                 
                 <div class="cost-row" onclick="toggleSubCost('sub-proc')">
                     <div class="cost-label"><span class="chevron">▶</span> Process (กระบวนการ)</div>
                     <div class="cost-bar-container"><div class="cost-bar-fill" id="bar-proc" style="width: 0%; background: var(--color-proc);"></div></div>
-                    <div class="cost-value"><span class="percent" id="pct-proc">0.0%</span> · <span id="val-proc">0.00</span> ฿/pc</div>
+                    <div class="cost-value"><span class="percent" id="pct-proc">0.0%</span> · <span id="val-proc">0.00</span> B/pc</div>
                 </div>
                 <div class="sub-cost-container" id="sub-proc"></div>
                 
                 <div class="cost-row" onclick="toggleSubCost('sub-sa')">
                     <div class="cost-label"><span class="chevron">▶</span> S&A + Charges</div>
                     <div class="cost-bar-container"><div class="cost-bar-fill" id="bar-sa" style="width: 0%; background: var(--color-sa);"></div></div>
-                    <div class="cost-value"><span class="percent" id="pct-sa">0.0%</span> · <span id="val-sa">0.00</span> ฿/pc</div>
+                    <div class="cost-value"><span class="percent" id="pct-sa">0.0%</span> · <span id="val-sa">0.00</span> B/pc</div>
                 </div>
                 <div class="sub-cost-container" id="sub-sa"></div>
                 
                 <div class="cost-row" onclick="toggleSubCost('sub-design')">
                     <div class="cost-label"><span class="chevron">▶</span> Design</div>
                     <div class="cost-bar-container"><div class="cost-bar-fill" id="bar-design" style="width: 0%; background: var(--color-design);"></div></div>
-                    <div class="cost-value"><span class="percent" id="pct-design">0.0%</span> · <span id="val-design">0.00</span> ฿/pc</div>
+                    <div class="cost-value"><span class="percent" id="pct-design">0.0%</span> · <span id="val-design">0.00</span> B/pc</div>
                 </div>
                 <div class="sub-cost-container" id="sub-design"></div>
                 
                 <div class="cost-row" onclick="toggleSubCost('sub-tool')">
                     <div class="cost-label"><span class="chevron">▶</span> Tooling</div>
                     <div class="cost-bar-container"><div class="cost-bar-fill" id="bar-tool" style="width: 0%; background: var(--color-tool);"></div></div>
-                    <div class="cost-value"><span class="percent" id="pct-tool">0.0%</span> · <span id="val-tool">0.00</span> ฿/pc</div>
+                    <div class="cost-value"><span class="percent" id="pct-tool">0.0%</span> · <span id="val-tool">0.00</span> B/pc</div>
                 </div>
                 <div class="sub-cost-container" id="sub-tool"></div>
 
@@ -877,7 +877,7 @@
                 <div class="cost-row" style="margin-bottom: 0; cursor: default;">
                     <div class="cost-label" style="font-weight: 700;">Grand Total</div>
                     <div class="cost-bar-container" style="height: 7px;"><div class="cost-bar-fill" style="width: 100%; background: #94A3B8;"></div></div>
-                    <div class="cost-value" style="color: var(--text-dark);"><span class="percent" style="color: var(--text-dark);">100%</span> · <span id="val-grand">0.00</span> ฿/pc</div>
+                    <div class="cost-value" style="color: var(--text-dark);"><span class="percent" style="color: var(--text-dark);">100%</span> · <span id="val-grand">0.00</span> B/pc</div>
                 </div>
             </div>
         </div>
@@ -909,11 +909,11 @@
     <div class="fsb-center">
         <div class="fsb-price-box">
             <span class="fsb-label">IRC DEPRE</span>
-            <div class="fsb-value-group"><input type="text" id="summary-irc" value="0.00" readonly><span class="fsb-unit">฿/pcs</span></div>
+            <div class="fsb-value-group"><input type="text" id="summary-irc" value="0.00" readonly><span class="fsb-unit">B/pc</span></div>
         </div>
         <div class="fsb-price-box">
             <span class="fsb-label">CUSTOMER PAY</span>
-            <div class="fsb-value-group"><input type="text" id="summary-customer" value="0.00" readonly><span class="fsb-unit">฿/pcs</span></div>
+            <div class="fsb-value-group"><input type="text" id="summary-customer" value="0.00" readonly><span class="fsb-unit">B/pc</span></div>
         </div>
     </div>
     <div class="fsb-right">
@@ -1079,31 +1079,31 @@
 
         function makeRow(name, cost) {
             var pct = grandTotal > 0 ? ((cost / grandTotal) * 100).toFixed(1) : "0.0";
-            return `<div class="sub-cost-row"><span>${name}</span><span><span style="color: var(--cyan-10); font-weight: 600; margin-right: 8px;">${pct}%</span>${cost.toFixed(2)} ฿</span></div>`;
+            return `<div class="sub-cost-row"><span>${name}</span><span><span style="color: var(--cyan-10); font-weight: 600; margin-right: 8px;">${pct}%</span>${cost.toFixed(2)} B</span></div>`;
         }
 
         var matHtml = '';
         matItems.forEach(item => { matHtml += makeRow(item.name, item.cost); });
-        if(matHtml === '') matHtml = '<div class="sub-cost-row"><span>No Items</span><span><span style="color: var(--cyan-10); font-weight: 600; margin-right: 8px;">0.0%</span>0.00 ฿</span></div>';
+        if(matHtml === '') matHtml = '<div class="sub-cost-row"><span>No Items</span><span><span style="color: var(--cyan-10); font-weight: 600; margin-right: 8px;">0.0%</span>0.00 B</span></div>';
         document.getElementById('sub-mat').innerHTML = matHtml;
         document.getElementById('total-mat-display').value = matSum.toFixed(2);
 
         var procHtml = '';
         procItems.forEach(item => { procHtml += makeRow(item.name, item.cost); });
-        if(procHtml === '') procHtml = '<div class="sub-cost-row"><span>No Items</span><span><span style="color: var(--cyan-10); font-weight: 600; margin-right: 8px;">0.0%</span>0.00 ฿</span></div>';
+        if(procHtml === '') procHtml = '<div class="sub-cost-row"><span>No Items</span><span><span style="color: var(--cyan-10); font-weight: 600; margin-right: 8px;">0.0%</span>0.00 B</span></div>';
         document.getElementById('sub-proc').innerHTML = procHtml;
         document.getElementById('total-proc-display').value = procSum.toFixed(2);
 
         var saHtml = '';
         saItems.forEach(item => { saHtml += makeRow(item.name, item.cost); });
-        if(saHtml === '') saHtml = '<div class="sub-cost-row"><span>No Items</span><span><span style="color: var(--cyan-10); font-weight: 600; margin-right: 8px;">0.0%</span>0.00 ฿</span></div>';
+        if(saHtml === '') saHtml = '<div class="sub-cost-row"><span>No Items</span><span><span style="color: var(--cyan-10); font-weight: 600; margin-right: 8px;">0.0%</span>0.00 B</span></div>';
         document.getElementById('sub-sa').innerHTML = saHtml;
 
         document.getElementById('sub-design').innerHTML = makeRow('Design Cost', designCost);
 
         var toolHtml = '';
         toolItems.forEach(item => { toolHtml += makeRow(item.name, item.cost); });
-        if(toolHtml === '') toolHtml = '<div class="sub-cost-row"><span>No Items</span><span><span style="color: var(--cyan-10); font-weight: 600; margin-right: 8px;">0.0%</span>0.00 ฿</span></div>';
+        if(toolHtml === '') toolHtml = '<div class="sub-cost-row"><span>No Items</span><span><span style="color: var(--cyan-10); font-weight: 600; margin-right: 8px;">0.0%</span>0.00 B</span></div>';
         document.getElementById('sub-tool').innerHTML = toolHtml;
         document.getElementById('total-tool-display').value = toolSum.toFixed(2);
 
